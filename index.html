@@ -8,123 +8,246 @@
 <style>
 body{
   margin:0;
-  font-family:Arial;
+  font-family:Arial, sans-serif;
   background:#0b1220;
   color:#fff;
   text-align:center;
 }
 
+.wrap{
+  max-width:720px;
+  margin:0 auto;
+  padding:18px 12px 28px;
+}
+
 h1{
-  margin:25px 0;
+  margin:20px 0 8px;
+  font-size:34px;
+}
+
+.sub{
+  color:#9ca3af;
+  font-size:14px;
+  margin-bottom:12px;
 }
 
 .counter{
   color:#22c55e;
-  margin-bottom:15px;
-}
-
-.card{
-  width:90%;
-  margin:15px auto;
-  padding:18px;
-  border-radius:15px;
-  text-align:left;
-  background:#111827;
-}
-
-.title{
-  font-size:20px;
+  margin-bottom:18px;
+  font-size:14px;
   font-weight:bold;
 }
 
+.card{
+  width:100%;
+  margin:16px auto;
+  padding:18px;
+  border-radius:18px;
+  text-align:left;
+  background:#111827;
+  box-sizing:border-box;
+  box-shadow:0 10px 25px rgba(0,0,0,.22);
+  border:1px solid rgba(255,255,255,.04);
+}
+
+.badge{
+  display:inline-block;
+  font-size:12px;
+  font-weight:bold;
+  padding:6px 10px;
+  border-radius:999px;
+  margin-bottom:10px;
+  background:#facc15;
+  color:#111827;
+}
+
+.title{
+  font-size:22px;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
 .bonus{
-  margin-top:5px;
-  font-size:14px;
+  margin-top:6px;
+  font-size:15px;
   color:#e5e7eb;
+  line-height:1.45;
 }
 
 .code{
-  margin-top:5px;
+  margin-top:8px;
   color:#facc15;
+  font-size:15px;
+  font-weight:bold;
 }
 
 .btn{
   display:block;
-  margin-top:12px;
-  padding:12px;
-  border-radius:10px;
+  margin-top:14px;
+  padding:15px;
+  border-radius:13px;
   text-align:center;
   text-decoration:none;
   color:white;
+  font-size:17px;
+  font-weight:bold;
+  transition:transform .18s ease, opacity .18s ease;
+}
+
+.btn:hover{
+  transform:scale(1.02);
+  opacity:.95;
 }
 
 .green{background:#16a34a}
 .blue{background:#2563eb}
 .red{background:#dc2626}
 .yellow{background:#ca8a04}
+
+.toast-wrap{
+  position:fixed;
+  left:12px;
+  right:12px;
+  bottom:14px;
+  z-index:9999;
+  pointer-events:none;
+}
+
+.toast{
+  display:none;
+  margin:0 auto;
+  max-width:520px;
+  background:#111827;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 12px 30px rgba(0,0,0,.35);
+  border-radius:14px;
+  padding:12px 14px;
+  text-align:left;
+  font-size:14px;
+}
+
+.toast strong{
+  color:#22c55e;
+}
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(11,18,32,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.topbar-inner{
+  max-width:720px;
+  margin:0 auto;
+  padding:10px 12px;
+  font-size:13px;
+  color:#d1d5db;
+}
+
+.topbar-inner span{
+  color:#22c55e;
+  font-weight:bold;
+}
+
+@media (max-width:480px){
+  h1{font-size:28px}
+  .title{font-size:20px}
+}
 </style>
-
 </head>
-
 <body>
 
-<h1>🎯 Güvenilir Bahis Siteleri</h1>
-
-<div class="counter">👥 Şu an 528 kişi aktif</div>
-
-<!-- Betwinner -->
-<div class="card">
-<div class="title">Betwinner</div>
-<div class="bonus">%200 Hoşgeldin Bonusu</div>
-<div class="bonus">7000₺’ye kadar bonus</div>
-<div class="code">Kod: YUZDE100</div>
-<a class="btn green" href="https://bit.ly/BetwınnerGiris">Siteye Git</a>
+<div class="topbar">
+  <div class="topbar-inner">🟢 Şu anda <span id="topCount">528</span> kişi bu sayfayı inceliyor</div>
 </div>
 
-<!-- Megapari -->
-<div class="card">
-<div class="title">Megapari</div>
-<div class="bonus">9400₺ Spor + 52500₺ Casino</div>
-<div class="bonus">150 FS + 2010₺ Freebet</div>
-<div class="code">Kod: YUZDE100</div>
-<a class="btn blue" href="https://bit.ly/MegaparıGiris">Siteye Git</a>
+<div class="wrap">
+  <h1>🎯 Güvenilir Bahis Siteleri</h1>
+  <div class="sub">⚡ En yüksek oranlar • Güncel bonuslar • Hızlı giriş</div>
+  <div class="counter" id="counter">👥 Şu an 528 kişi aktif</div>
+
+  <!-- Betwinner -->
+  <div class="card">
+    <div class="badge">🔥 EN POPÜLER</div>
+    <div class="title">Betwinner</div>
+    <div class="bonus">%200 Hoşgeldin Bonusu</div>
+    <div class="bonus">7000₺’ye kadar bonus</div>
+    <div class="code">Kod: YUZDE100</div>
+    <a class="btn green" href="https://bit.ly/BetwınnerGiris">Hemen Oyna 🔥</a>
+  </div>
+
+  <!-- Megapari -->
+  <div class="card">
+    <div class="title">Megapari</div>
+    <div class="bonus">9400₺ Spor + 52500₺ Casino</div>
+    <div class="bonus">150 FS + 2010₺ Freebet</div>
+    <div class="code">Kod: YUZDE100</div>
+    <a class="btn blue" href="https://bit.ly/MegaparıGiris">Hemen Oyna 🔥</a>
+  </div>
+
+  <!-- Melbet -->
+  <div class="card">
+    <div class="title">Melbet</div>
+    <div class="bonus">64.750₺ + 290 Free Spin</div>
+    <div class="bonus">5 yatırıma bonus</div>
+    <div class="code">Kod: YUZDE100</div>
+    <a class="btn red" href="http://bit.ly/MelBetGiris">Hemen Oyna 🔥</a>
+  </div>
+
+  <!-- 1xBet -->
+  <div class="card">
+    <div class="title">1xBet</div>
+    <div class="bonus">75.500₺ Bonus + 150 Free Spin</div>
+    <div class="bonus">Min. 500₺ yatırım</div>
+    <div class="code">Kod: WCTPS</div>
+    <a class="btn blue" href="https://bit.ly/1xbetGirisLink">Hemen Oyna 🔥</a>
+  </div>
+
+  <!-- Epybet -->
+  <div class="card">
+    <div class="title">Epybet</div>
+    <div class="bonus">%500 Bonus + 500 TL Freebet</div>
+    <div class="bonus">500 Free Spin</div>
+    <div class="code">Kod: YUZDE100</div>
+    <a class="btn yellow" href="https://bit.ly/EpyBetGirisLink">Hemen Oyna 🔥</a>
+  </div>
 </div>
 
-<!-- Melbet -->
-<div class="card">
-<div class="title">Melbet</div>
-<div class="bonus">64.750₺ + 290 Free Spin</div>
-<div class="bonus">5 yatırıma bonus</div>
-<div class="code">Kod: YUZDE100</div>
-<a class="btn red" href="http://bit.ly/MelBetGiris">Siteye Git</a>
-</div>
-
-<!-- 1xBet -->
-<div class="card">
-<div class="title">1xBet</div>
-<div class="bonus">75.500₺ Bonus + 150 Free Spin</div>
-<div class="bonus">Min. 500₺ yatırım</div>
-<div class="code">Kod: WCTPS</div>
-<a class="btn blue" href="https://bit.ly/1xbetGirisLink">Siteye Git</a>
-</div>
-
-<!-- Epybet -->
-<div class="card">
-<div class="title">Epybet</div>
-<div class="bonus">%500 Bonus + 500 TL Freebet</div>
-<div class="bonus">500 Free Spin</div>
-<div class="code">Kod: YUZDE100</div>
-<a class="btn yellow" href="https://bit.ly/EpyBetGirisLink">Siteye Git</a>
+<div class="toast-wrap">
+  <div class="toast" id="toast"></div>
 </div>
 
 <script>
-// fake sayaç
-let count = 520;
-setInterval(()=>{
-  count += Math.floor(Math.random()*3);
-  document.querySelector(".counter").innerText =
-  "👥 Şu an " + count + " kişi aktif";
-},3000);
+let count = 528;
+const counter = document.getElementById("counter");
+const topCount = document.getElementById("topCount");
+
+setInterval(() => {
+  count += Math.floor(Math.random() * 3);
+  counter.innerText = "👥 Şu an " + count + " kişi aktif";
+  topCount.innerText = count;
+}, 3000);
+
+const names = ["Ahmet", "Mehmet", "Can", "Emre", "Burak", "Ali", "Mert", "Eren", "Yusuf"];
+const sites = ["Betwinner", "Megapari", "Melbet", "1xBet", "Epybet"];
+const toast = document.getElementById("toast");
+
+function showToast(){
+  const name = names[Math.floor(Math.random() * names.length)];
+  const site = sites[Math.floor(Math.random() * sites.length)];
+  toast.innerHTML = "<strong>" + name + "</strong> az önce <strong>" + site + "</strong> üzerinden giriş yaptı.";
+  toast.style.display = "block";
+  setTimeout(() => {
+    toast.style.display = "none";
+  }, 2600);
+}
+
+setTimeout(showToast, 4000);
+setInterval(showToast, 9000);
 </script>
 
 </body>
