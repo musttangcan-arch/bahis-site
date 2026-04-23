@@ -1,138 +1,226 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Güvenilir Bahis Siteleri</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Güvenilir Bahis Siteleri</title>
+  <meta name="description" content="Güvenilir bahis siteleri, güncel giriş linkleri ve aktif bonus fırsatları tek sayfada." />
+  <style>
+    * { box-sizing: border-box; }
 
-<style>
-body {
-  margin:0;
-  font-family:Arial;
-  background:#071226;
-  color:white;
-}
-.container {
-  max-width:520px;
-  margin:auto;
-  padding:15px;
-}
-.topbar {
-  text-align:center;
-  padding:10px;
-  font-size:14px;
-  color:#cbd5e1;
-}
-h1 { font-size:28px; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #020817 0%, #06152f 100%);
+      color: #fff;
+    }
 
-.card {
-  background:#0f172a;
-  padding:20px;
-  border-radius:20px;
-  margin-bottom:15px;
-}
-.badge {
-  background:gold;
-  color:black;
-  padding:5px 12px;
-  border-radius:20px;
-  font-size:12px;
-  display:inline-block;
-}
-.btn {
-  display:block;
-  text-align:center;
-  padding:16px;
-  border-radius:15px;
-  margin-top:15px;
-  font-weight:bold;
-  text-decoration:none;
-  color:white;
-}
-.wepari {background:#2563eb;}
-.green {background:#16a34a;}
-.blue {background:#2563eb;}
-.purple {background:#7c3aed;}
-.yellow {background:#ca8a04;}
-.red {background:#dc2626;}
-</style>
+    .topbar {
+      text-align: center;
+      padding: 14px 12px;
+      font-size: 14px;
+      color: #cbd5e1;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: #22c55e;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 7px;
+      box-shadow: 0 0 10px rgba(34,197,94,0.55);
+      vertical-align: middle;
+    }
+
+    .container {
+      max-width: 540px;
+      margin: 0 auto;
+      padding: 18px 14px 28px;
+    }
+
+    .hero {
+      margin-bottom: 18px;
+      padding: 4px 4px 10px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 31px;
+      line-height: 1.15;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .hero p {
+      margin: 10px 0 0;
+      font-size: 16px;
+      line-height: 1.55;
+      color: #94a3b8;
+    }
+
+    .active-line {
+      text-align: center;
+      color: #22c55e;
+      font-size: 15px;
+      font-weight: 700;
+      margin: 10px 0 18px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #0b1a36 0%, #0a1730 100%);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 26px;
+      padding: 22px 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #facc15;
+      color: #1f2937;
+      padding: 8px 15px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .site-name {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: #fff;
+    }
+
+    .line {
+      font-size: 16px;
+      line-height: 1.65;
+      color: #e5e7eb;
+      margin-bottom: 6px;
+    }
+
+    .promo {
+      color: #facc15;
+      font-size: 17px;
+      font-weight: 800;
+      margin: 14px 0 16px;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 800;
+      padding: 18px 14px;
+      border-radius: 20px;
+      transition: transform .18s ease, opacity .18s ease, box-shadow .18s ease;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.16);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px) scale(1.01);
+      opacity: .98;
+    }
+
+    .btn:active {
+      transform: scale(.985);
+    }
+
+    .wepari { background: #2563eb; }
+    .green { background: #16a34a; }
+    .blue { background: #2563eb; }
+    .purple { background: #7c3aed; }
+    .red { background: #dc2626; }
+    .yellow { background: #ca8a04; }
+
+    .footer {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 { font-size: 28px; }
+      .site-name { font-size: 25px; }
+      .btn { font-size: 16px; }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <div class="topbar">
+    <span class="dot"></span> Güncel bağlantılar ve bonus fırsatları tek sayfada
+  </div>
 
-<h1>🎯 Güvenilir Bahis Siteleri</h1>
+  <div class="container">
 
-<!-- WEPARI -->
-<div class="card">
-<div class="badge">🔥 EN POPÜLER</div>
-<h2>Wepari</h2>
-<p>5100 TRY %100 bonus</p>
-<p>12.995 TRY %50 bonus</p>
-<p>Kod: EXTRA200</p>
+    <div class="hero">
+      <h1>🎯 Güvenilir Bahis Siteleri</h1>
+      <p>⚡ En yüksek oranlar • Güncel bonuslar • Hızlı giriş</p>
+    </div>
 
-<a class="btn wepari" href="/wepari.html">
-🔥 HEMEN OYNA
-</a>
-</div>
+    <div class="active-line">👥 Popüler siteler ve güncel giriş linkleri</div>
 
-<!-- BETWINNER -->
-<div class="card">
-<h2>Betwinner</h2>
-<p>45000 TL + 150 FS'a kadar bonus alın!</p>
-<p>Kod: YUZDE100</p>
+    <!-- WEPARI -->
+    <div class="card">
+      <div class="badge">🔥 EN POPÜLER</div>
+      <div class="site-name">Wepari</div>
+      <div class="line">🎁 İlk para yatırmanıza 5100 TRY'a %100 bonus</div>
+      <div class="line">💸 Her pazartesi: 12.995 TRY’ye kadar %50 bonus</div>
+      <div class="promo">Kod: EXTRA200</div>
+      <a class="btn wepari" href="/wepari.html">🔥 HEMEN OYNA</a>
+    </div>
 
-<a class="btn green" href="https://ctyx0quy5.com/155d?p=%2Fregistration%2F" target="_blank">
-🔥 BONUS AL VE GİR
-</a>
-</div>
+    <!-- BETWINNER -->
+    <div class="card">
+      <div class="site-name">Betwinner</div>
+      <div class="line">45000 TL + 150 FS'a kadar bonus alın!</div>
+      <div class="promo">Kod: YUZDE100</div>
+      <a class="btn green" href="https://ctyx0quy5.com/155d?p=%2Fregistration%2F" target="_blank" rel="noopener noreferrer">🔥 BONUS AL VE GİR</a>
+    </div>
 
-<!-- MEGAPARI -->
-<div class="card">
-<h2>Megapari</h2>
-<p>52500 TL Casino Hoş Geldin Bonusu + 150 Freespin</p>
-<p>Kod: YUZDE100</p>
+    <!-- MEGAPARI -->
+    <div class="card">
+      <div class="site-name">Megapari</div>
+      <div class="line">52500 TL Casino Hoş Geldin Bonusu + 150 Freespin</div>
+      <div class="promo">Kod: YUZDE100</div>
+      <a class="btn blue" href="https://bit.ly/MegaparıGiris" target="_blank" rel="noopener noreferrer">🔥 HEMEN OYNA</a>
+    </div>
 
-<a class="btn blue" href="https://bit.ly/MegaparıGiris" target="_blank">
-🔥 HEMEN OYNA
-</a>
-</div>
+    <!-- 1XBET -->
+    <div class="card">
+      <div class="site-name">1Xbet</div>
+      <div class="line">75500 TL + 150 FS'ye kadar hoş geldin bonusu</div>
+      <div class="promo">Kod: WCTPS</div>
+      <a class="btn purple" href="/1xbet.html">🔥 HEMEN OYNA</a>
+    </div>
 
-<!-- 1XBET -->
-<div class="card">
-<h2>1Xbet</h2>
-<p>75500 TL + 150 FS'ye kadar hoş geldin bonusu</p>
-<p>Kod: WCTPS</p>
+    <!-- EPYBET -->
+    <div class="card">
+      <div class="site-name">Epybet</div>
+      <div class="line">%500 Casino Bonusu + 500 Free Spin</div>
+      <div class="promo">Kod: YUZDE100</div>
+      <a class="btn red" href="https://bit.ly/EpyBetGirisLink" target="_blank" rel="noopener noreferrer">🔥 HEMEN OYNA</a>
+    </div>
 
-<a class="btn purple" href="/1xbet.html">
-🔥 HEMEN OYNA
-</a>
-</div>
+    <!-- MELBET -->
+    <div class="card">
+      <div class="site-name">Melbet</div>
+      <div class="line">64.770 TL + 290 Freespin Casino Bonusu</div>
+      <div class="promo">Kod: YUZDE100</div>
+      <a class="btn yellow" href="http://bit.ly/MelBetGiris" target="_blank" rel="noopener noreferrer">🔥 HEMEN OYNA</a>
+    </div>
 
-<!-- EPYBET -->
-<div class="card">
-<h2>Epybet</h2>
-<p>%500 Casino Bonusu + 500 Free Spin</p>
-<p>Kod: YUZDE100</p>
+    <div class="footer">
+      Güncel giriş linkleri tek sayfada listelenmiştir.
+    </div>
 
-<a class="btn red" href="https://bit.ly/EpyBetGirisLink" target="_blank">
-🔥 HEMEN OYNA
-</a>
-</div>
-
-<!-- MELBET -->
-<div class="card">
-<h2>Melbet</h2>
-<p>64.770 TL + 290 Freespin Casino Bonusu</p>
-<p>Kod: YUZDE100</p>
-
-<a class="btn yellow" href="http://bit.ly/MelBetGiris" target="_blank">
-🔥 HEMEN OYNA
-</a>
-</div>
-
-</div>
-
+  </div>
 </body>
 </html>
