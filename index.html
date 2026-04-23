@@ -1,412 +1,121 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Güvenilir Bahis Siteleri</title>
-  <meta name="description" content="Güvenilir bahis siteleri, güncel giriş linkleri ve aktif bonus fırsatları tek sayfada." />
-  <style>
-    * { box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Güvenilir Bahis Siteleri</title>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background:
-        radial-gradient(circle at top, rgba(37, 99, 235, 0.18), transparent 30%),
-        linear-gradient(180deg, #030712 0%, #071226 55%, #0a1930 100%);
-      color: #fff;
-    }
+<style>
+body {
+  margin:0;
+  font-family:Arial;
+  background:#071226;
+  color:white;
+}
 
-    .wrap {
-      max-width: 560px;
-      margin: 0 auto;
-      padding: 14px 14px 28px;
-    }
+.container {
+  max-width:520px;
+  margin:auto;
+  padding:15px;
+}
 
-    .topline {
-      text-align: center;
-      color: #cbd5e1;
-      font-size: 14px;
-      padding: 8px 0 14px;
-    }
+.card {
+  background:#0f172a;
+  padding:20px;
+  border-radius:20px;
+  margin-bottom:15px;
+}
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(10, 20, 40, 0.88));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 28px;
-      padding: 26px 20px 20px;
-      box-shadow: 0 14px 38px rgba(0,0,0,0.28);
-      margin-bottom: 18px;
-    }
+.btn {
+  display:block;
+  text-align:center;
+  padding:16px;
+  border-radius:15px;
+  margin-top:15px;
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+}
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      right: -60px;
-      top: -60px;
-      width: 180px;
-      height: 180px;
-      background: radial-gradient(circle, rgba(250,204,21,0.24), transparent 65%);
-      pointer-events: none;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background: linear-gradient(90deg, #facc15, #f59e0b);
-      color: #111827;
-      font-size: 12px;
-      font-weight: 800;
-      padding: 8px 14px;
-      border-radius: 999px;
-      margin-bottom: 14px;
-      box-shadow: 0 8px 18px rgba(245, 158, 11, 0.28);
-    }
-
-    .hero h1 {
-      margin: 0;
-      font-size: 31px;
-      line-height: 1.15;
-      font-weight: 800;
-      color: #f8fafc;
-    }
-
-    .hero p {
-      margin: 12px 0 0;
-      color: #94a3b8;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .countdown {
-      margin-top: 16px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 18px;
-      padding: 12px 14px;
-      text-align: center;
-    }
-
-    .countdown-label {
-      color: #cbd5e1;
-      font-size: 13px;
-      margin-bottom: 6px;
-    }
-
-    .countdown-time {
-      font-size: 24px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      color: #fff;
-    }
-
-    .card {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(180deg, rgba(9,17,34,0.98), rgba(12,24,44,0.92));
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 26px;
-      padding: 22px 18px;
-      margin-bottom: 16px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.25);
-    }
-
-    .card::after {
-      content: "";
-      position: absolute;
-      inset: auto -40px -40px auto;
-      width: 120px;
-      height: 120px;
-      background: radial-gradient(circle, rgba(255,255,255,0.05), transparent 70%);
-      pointer-events: none;
-    }
-
-    .popular {
-      border: 1px solid rgba(250,204,21,0.28);
-      box-shadow: 0 14px 34px rgba(245, 158, 11, 0.12);
-    }
-
-    .popular-tag {
-      display: inline-block;
-      background: linear-gradient(90deg, #facc15, #f59e0b);
-      color: #111827;
-      font-weight: 800;
-      font-size: 12px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      margin-bottom: 14px;
-    }
-
-    .site-name {
-      font-size: 28px;
-      font-weight: 800;
-      margin-bottom: 10px;
-      color: #ffffff;
-    }
-
-    .line {
-      font-size: 16px;
-      line-height: 1.65;
-      color: #d1d5db;
-      margin-bottom: 4px;
-    }
-
-    .promo {
-      margin-top: 14px;
-      margin-bottom: 8px;
-      color: #facc15;
-      font-size: 17px;
-      font-weight: 800;
-    }
-
-    .subpromo {
-      color: #93c5fd;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .btn {
-      position: relative;
-      display: block;
-      width: 100%;
-      text-decoration: none;
-      text-align: center;
-      color: #fff;
-      font-size: 17px;
-      font-weight: 800;
-      padding: 18px 14px;
-      border-radius: 18px;
-      transition: transform .18s ease, opacity .18s ease, box-shadow .18s ease;
-      overflow: hidden;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px) scale(1.01);
-      opacity: .98;
-    }
-
-    .btn:active {
-      transform: scale(.985);
-    }
-
-    .btn::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -120%;
-      width: 70%;
-      height: 100%;
-      transform: skewX(-20deg);
-      background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,.28), rgba(255,255,255,0));
-      transition: left .6s ease;
-    }
-
-    .btn:hover::after {
-      left: 140%;
-    }
-
-    .wepari { background: linear-gradient(90deg, #2563eb, #1d4ed8); box-shadow: 0 10px 24px rgba(37,99,235,.28); }
-    .betwinner { background: linear-gradient(90deg, #16a34a, #15803d); box-shadow: 0 10px 24px rgba(22,163,74,.28); }
-    .megapari { background: linear-gradient(90deg, #0ea5e9, #2563eb); box-shadow: 0 10px 24px rgba(14,165,233,.26); }
-    .xbet { background: linear-gradient(90deg, #7c3aed, #6d28d9); box-shadow: 0 10px 24px rgba(124,58,237,.28); }
-    .epybet { background: linear-gradient(90deg, #dc2626, #b91c1c); box-shadow: 0 10px 24px rgba(220,38,38,.24); }
-    .melbet { background: linear-gradient(90deg, #ca8a04, #a16207); box-shadow: 0 10px 24px rgba(202,138,4,.24); }
-
-    .footer-box {
-      margin-top: 8px;
-      text-align: center;
-      color: #94a3b8;
-      font-size: 13px;
-      line-height: 1.7;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: 18px;
-      padding: 16px;
-    }
-
-    .sticky-bar {
-      position: sticky;
-      bottom: 12px;
-      z-index: 20;
-      margin-top: 10px;
-    }
-
-    .sticky-inner {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      background: rgba(255,255,255,0.96);
-      color: #111827;
-      border-radius: 18px;
-      padding: 10px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.16);
-    }
-
-    .sticky-text {
-      flex: 1;
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 1.35;
-    }
-
-    .sticky-btn {
-      flex-shrink: 0;
-      text-decoration: none;
-      background: linear-gradient(90deg, #2563eb, #1d4ed8);
-      color: #fff;
-      font-weight: 800;
-      padding: 14px 16px;
-      border-radius: 14px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 420px) {
-      .hero h1 { font-size: 28px; }
-      .site-name { font-size: 25px; }
-      .btn { font-size: 16px; }
-    }
-  </style>
+.wepari {background:#2563eb;}
+.green {background:#16a34a;}
+.blue {background:#2563eb;}
+.purple {background:#7c3aed;}
+.yellow {background:#ca8a04;}
+.red {background:#dc2626;}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="topline">⚡ Güncel giriş linkleri ve aktif bonus fırsatları</div>
 
-    <div class="hero">
-      <div class="hero-badge">PREMIUM LİSTE</div>
-      <h1>🎯 Güvenilir Bahis Siteleri</h1>
-      <p>En popüler platformlar, güncel bağlantılar ve promo kodları tek sayfada.</p>
+<div class="container">
 
-      <div class="countdown">
-        <div class="countdown-label">Kampanya kutusunun yenilenmesine kalan süre</div>
-        <div class="countdown-time" id="countdown">00:00:00</div>
-      </div>
-    </div>
+<h1>🎯 Güvenilir Bahis Siteleri</h1>
 
-   <div class="card popular">
-  <div class="popular-tag">🔥 EN POPÜLER</div>
+<!-- WEPARI -->
+<div class="card">
+<h2>Wepari 🔥</h2>
+<p>5100 TRY %100 bonus</p>
+<p>12.995 TRY %50 bonus</p>
+<p>Kod: EXTRA200</p>
 
-  <div class="site-name">Wepari</div>
-
-  <div class="line">🎁 İlk para yatırmanıza 5100 TRY'a %100 bonus</div>
-  <div class="line">💸 Her pazartesi: 12.995 TRY’ye kadar %50 bonus</div>
-
-  <div class="promo">Kod: EXTRA200</div>
-
-  <div class="subpromo">⚠️ Güncel kampanya aktif</div>
-
-  <a class="btn wepari"
-     href="https://refpa59139.com/L?tag=d_5517923m_110800c_&amp;site=5517923&amp;ad=110800&amp;r=registration"
-     target="_blank"
-     rel="noopener noreferrer">
-    🔥 HEMEN OYNA
-  </a>
+<a class="btn wepari" href="/wepari.html">
+🔥 HEMEN OYNA
+</a>
 </div>
 
-    <div class="card">
-      <div class="site-name">Betwinner</div>
-      <div class="line">%200 Hoş Geldin Bonusu</div>
-      <div class="line">Yeni üyeler için giriş bağlantısı</div>
-      <div class="promo">Kod: YUZDE100</div>
-      <a class="btn betwinner" href="https://ctyx0quy5.com/155d?p=%2Fregistration%2F" target="_blank" rel="noopener noreferrer">
-        🎯 BONUS AL VE GİR
-      </a>
-    </div>
+<!-- BETWINNER -->
+<div class="card">
+<h2>Betwinner</h2>
+<p>%200 bonus</p>
+<p>Kod: YUZDE100</p>
 
-    <div class="card">
-      <div class="site-name">Megapari</div>
-      <div class="line">Freebet + Freespin fırsatları</div>
-      <div class="line">Güncel giriş ve kampanyalar</div>
-      <div class="promo">Kod: YUZDE100</div>
-      <a class="btn megapari" href="https://bit.ly/MegaparıGiris" target="_blank" rel="noopener noreferrer">
-        💙 HEMEN OYNA
-      </a>
-    </div>
+<a class="btn green" href="https://ctyx0quy5.com/155d?p=%2Fregistration%2F" target="_blank">
+Hemen Oyna
+</a>
+</div>
 
-    <div class="card">
-      <div class="site-name">1Xbet</div>
-      <div class="line">Bonus fırsatları</div>
-      <div class="line">Güncel giriş bağlantısı</div>
-      <div class="promo">Kod: WCTPS</div>
-      <a class="btn xbet" href="https://bit.ly/1xbetGirisLink" target="_blank" rel="noopener noreferrer">
-        🟣 HEMEN OYNA
-      </a>
-    </div>
+<!-- MEGAPARI -->
+<div class="card">
+<h2>Megapari</h2>
+<p>Kod: YUZDE100</p>
 
-    <div class="card">
-      <div class="site-name">Epybet</div>
-      <div class="line">Anlık bonus fırsatları</div>
-      <div class="line">Yeni üyelere özel kampanyalar</div>
-      <div class="promo">Kod: YUZDE100</div>
-      <a class="btn epybet" href="https://bit.ly/EpyBetGirisLink" target="_blank" rel="noopener noreferrer">
-        🔴 HEMEN OYNA
-      </a>
-    </div>
+<a class="btn blue" href="https://bit.ly/MegaparıGiris" target="_blank">
+Hemen Oyna
+</a>
+</div>
 
-    <div class="card">
-      <div class="site-name">Melbet</div>
-      <div class="line">%200 Hoş Geldin Bonusu</div>
-      <div class="line">Güncel giriş ve promosyonlar</div>
-      <div class="promo">Kod: YUZDE100</div>
-      <a class="btn melbet" href="http://bit.ly/MelBetGiris" target="_blank" rel="noopener noreferrer">
-        🟡 HEMEN OYNA
-      </a>
-    </div>
+<!-- 1XBET -->
+<div class="card">
+<h2>1Xbet</h2>
+<p>Kod: WCTPS</p>
 
-    <div class="footer-box">
-      Güncel bağlantılar ve promo kodları tek sayfada düzenli tutulur.
-    </div>
+<a class="btn purple" href="https://bit.ly/1xbetGirisLink" target="_blank">
+Hemen Oyna
+</a>
+</div>
 
-    <div class="sticky-bar">
-      <div class="sticky-inner">
-        <div class="sticky-text">
-          En çok öne çıkan seçenek: <strong>Wepari</strong>
-        </div>
-        <a class="sticky-btn" href="https://til.ac/hssqg3a" target="_blank" rel="noopener noreferrer">
-          Şimdi Git
-        </a>
-      </div>
-    </div>
-  </div>
+<!-- EPYBET -->
+<div class="card">
+<h2>Epybet</h2>
+<p>Kod: YUZDE100</p>
 
-  <script>
-    (function () {
-      const el = document.getElementById("countdown");
-      if (!el) return;
+<a class="btn red" href="https://bit.ly/EpyBetGirisLink" target="_blank">
+Hemen Oyna
+</a>
+</div>
 
-      function nextMidnight() {
-        const now = new Date();
-        const tomorrow = new Date(now);
-        tomorrow.setDate(now.getDate() + 1);
-        tomorrow.setHours(0, 0, 0, 0);
-        return tomorrow;
-      }
+<!-- MELBET -->
+<div class="card">
+<h2>Melbet</h2>
+<p>Kod: YUZDE100</p>
 
-      let target = nextMidnight();
+<a class="btn yellow" href="http://bit.ly/MelBetGiris" target="_blank">
+Hemen Oyna
+</a>
+</div>
 
-      function tick() {
-        const now = new Date();
-        let diff = target - now;
+</div>
 
-        if (diff <= 0) {
-          target = nextMidnight();
-          diff = target - now;
-        }
-
-        const hours = Math.floor(diff / 1000 / 60 / 60);
-        const minutes = Math.floor((diff / 1000 / 60) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
-
-        el.textContent =
-          String(hours).padStart(2, "0") + ":" +
-          String(minutes).padStart(2, "0") + ":" +
-          String(seconds).padStart(2, "0");
-      }
-
-      tick();
-      setInterval(tick, 1000);
-    })();
-  </script>
 </body>
 </html>
